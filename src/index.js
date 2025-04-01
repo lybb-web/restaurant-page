@@ -1,0 +1,1 @@
+console.log("Your life is NOTHING!");

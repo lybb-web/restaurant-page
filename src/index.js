@@ -82,6 +82,20 @@ const renderWebsite = (function() {
     }
 
 
+    function renderMenu()
+    {
+        console.log("innnout menu");
+        let menuList = document.createElement("ul");
+        let menuItems = ["Double Double", "Cheeseburger", "French Fries", "Milkshake"]
+        for (let i = 0; i < menuItems.length; i++)
+        {
+            let listItem = document.createElement("li");
+            listItem.textContent = menuItems[i];
+            menuList.appendChild(listItem);
+        }
+        content.appendChild(menuList);
+    }
+
     console.log(content);
 
     let homeNav = document.getElementById("home-button");
@@ -89,6 +103,13 @@ const renderWebsite = (function() {
     {
         content.innerHTML = "";
         renderHome();
+    })
+
+    let menuNav = document.getElementById("menu-button")
+    menuNav.addEventListener("click", (e) =>
+    {
+        content.innerHTML = "";
+        renderMenu();
     })
 
     // renderHome();

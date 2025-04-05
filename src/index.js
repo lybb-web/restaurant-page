@@ -96,7 +96,17 @@ const renderWebsite = (function() {
         content.appendChild(menuList);
     }
 
-    console.log(content);
+    function renderContact()
+    {
+        console.log("Contact Gaming");
+        let header = document.createElement("h1");
+        header.textContent = "Contact US!";
+        let contactNumber = document.createElement("h3");
+        contactNumber.textContent = "(420) 069-6969";
+        content.appendChild(header);
+        content.appendChild(contactNumber);
+    }
+
 
     let homeNav = document.getElementById("home-button");
     homeNav.addEventListener("click", (e) =>
@@ -110,6 +120,13 @@ const renderWebsite = (function() {
     {
         content.innerHTML = "";
         renderMenu();
+    })
+
+    let contactNav = document.getElementById("contact-button")
+    contactNav.addEventListener("click", (e) =>
+    {
+        content.innerHTML = "";
+        renderContact();
     })
 
     // renderHome();

@@ -30,26 +30,70 @@
 
 
 
-const homeMenu = (function() {
-    console.log("we're stuck on a different planet!");
-    let content = document.getElementById("content");
-    let h2 = document.createElement("h2");
-    h2.textContent = "Welcome to One of the Restaurants of All Time!!!!!";
-    content.appendChild(h2);
+// function renderNav()
+// {
+//     let menuNav = document.getElementById("menu-button");
+//     menuNav.addEventListener("click", (e) =>
+//     {
 
-    let h3 = document.createElement("h3");
-    h3.textContent = "10/10 Would eat at again.";
-    content.appendChild(h3);
+//     })
+// }
 
-    let h6 = document.createElement("h6");
-    h6.textContent = "- Gordon Ramsey";
-    content.appendChild(h6);
-    let menuNav = document.getElementById("menu-button");
-    menuNav.addEventListener("click", (e) =>
-        {
-            console.log("I need a bigger gun!");
 
-        })
+
+
+const renderWebsite = (function() {
+    // console.log("we're stuck on a different planet!");
+    // let content = document.getElementById("content");
+    // let h2 = document.createElement("h2");
+    // h2.textContent = "Welcome to One of the Restaurants of All Time!!!!!";
+    // content.appendChild(h2);
+
+    // let h3 = document.createElement("h3");
+    // h3.textContent = "10/10 Would eat at again.";
+    // content.appendChild(h3);
+
+    // let h6 = document.createElement("h6");
+    // h6.textContent = "- Gordon Ramsey";
+    // content.appendChild(h6);
+    // let menuNav = document.getElementById("menu-button");
+    // menuNav.addEventListener("click", (e) =>
+    //     {
+    //         content.innerHTML = "";
+    //         console.log("I need a bigger gun!");
+
+    //     })
+
+    function renderHome() {
+        console.log("we're stuck on a different planet!");
+        let content = document.getElementById("content");
+        let h2 = document.createElement("h2");
+        h2.textContent = "Welcome to One of the Restaurants of All Time!!!!!";
+        content.appendChild(h2);
+
+        let h3 = document.createElement("h3");
+        h3.textContent = "10/10 Would eat at again.";
+        content.appendChild(h3);
+
+        let h6 = document.createElement("h6");
+        h6.textContent = "- Gordon Ramsey";
+        content.appendChild(h6);
+        let menuNav = document.getElementById("menu-button");
+    }
+
+
+    console.log(content);
+
+    let homeNav = document.getElementById("home-button");
+    homeNav.addEventListener("click", (e) =>
+    {
+        content.innerHTML = "";
+        renderHome();
+    })
+
+    // renderHome();
+
+
 });
 
 
@@ -58,4 +102,4 @@ const homeMenu = (function() {
 
 
 
-homeMenu()
+renderWebsite()
